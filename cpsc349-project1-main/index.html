@@ -1,27 +1,28 @@
 ---
 layout: base
-title: click on photo to see photographer information
+title: Home
 ---
 <header>
     <h1>{{ title }} </h1>
     <h2>This collection shows photos of trees and mountains covered in snow, and other landscapes during winter.
         There is very little human presence, and only manmade structures such as log cabins are visible in some photos.</h2>
 </header>
-<nav>
-<ul>
 
-    {% for media in photos.uq9nuzt.media -%}
-    <li><a href="{{media.photographer_url}}"><img src = "{{media.src.tiny}}" alt = "{{media.alt}}"></a></li>
-    {% endfor -%}
-
-</ul>
-</nav>
+<body>
+    <nav>
+        <ul>
+            {% for media in photos.uq9nuzt.media -%}
+            <li><a href="/photos/{{media.id}}"><img src = "{{media.src.tiny}}" alt = "{{media.alt}}"></a></li>
+            {% endfor -%}
+        </ul>
+    </nav>
+</body>
 
 <footer>
     <hr>
     <p>
         <small>
-            <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small> 
+            <a href="https://www.pexels.com/%22%3EPhotos"> provided by Pexels</a>
+        </small>
     </p>
 </footer>
